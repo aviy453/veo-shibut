@@ -1,0 +1,32 @@
+<script type="importmap">
+  {
+    "imports": {
+      "@google/genai": "https://esm.sh/@google/genai@^1.4.0"
+    }
+  }
+</script>
+<div id="app-container">
+  <h1>Veo - Video Generation</h1>
+  <p>Enter a prompt and optionally provide a conditioning image to generate a video.</p>
+  
+  <label for="prompt-input">Prompt</label>
+  <textarea id="prompt-input" placeholder="e.g., A majestic lion roaring on a rocky cliff at sunset" rows="4"></textarea>
+  
+  <label for="file-input">Conditioning Image (Optional)</label>
+  <input id="file-input" type="file" accept="image/*" />
+  
+  <img alt="Condition image preview" id="img" />
+  
+  <button id="generate-button">Generate</button>
+  
+  <video id="video" autoplay loop controls></video>
+
+  <div id="status-container">
+    <p id="status">Ready.</p>
+    <div id="quota-error">
+        You have exceeded your API quota. Please check your API key and plan.
+    </div>
+  </div>
+</div>
+<link rel="stylesheet" href="/index.css">
+<script type="module" src="/index.tsx"></script>
